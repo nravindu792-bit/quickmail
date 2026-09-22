@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7fb">
+
+    <title>QuickMail - Free Temporary Email</title>
+
+    <meta
+        name="description"
+        content="QuickMail provides a free temporary email address for receiving messages without using your personal inbox."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-shell">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <a class="logo" href="#top" aria-label="QuickMail home">
+            <span class="logo-mark" aria-hidden="true">✦</span>
+            <span>Quick<span>Mail</span></span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+
+            <a class="active" href="#top">Home</a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="nav-status">
+            <span class="online-dot"></span>
+            Service online
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="top">
+
+        <!-- HERO -->
+
+        <section class="hero" aria-labelledby="page-title">
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    <span aria-hidden="true">✦</span>
+                    Free Temporary Email
+                </span>
+
+                <h1 id="page-title">
+                    Your temporary email,
+                    <br>
+                    <span>instantly.</span>
+                </h1>
+
+                <p>
+                    Keep your real inbox quiet. Create a disposable address
+                    for sign-ups, downloads, and everything in between.
+                </p>
+
+
+                <!-- EMAIL BOX -->
+
+                <div
+                    class="email-box"
+                    aria-label="Your temporary email address"
+                >
+
+                    <div class="email-address">
+
+                        <span class="address-label">
+                            YOUR ADDRESS
+                        </span>
+
+                        <strong id="email">
+                            generating@email.com
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        onclick="copyEmail()"
+                        class="copy-btn"
+                    >
+                        <span aria-hidden="true">▣</span>
+                        Copy
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="generateEmail()"
+                        class="new-btn"
+                    >
+                        <span aria-hidden="true">↻</span>
+                        New email
+                    </button>
+
+                </div>
+
+
+                <div class="status">
+
+                    <span class="online-dot"></span>
+
+                    <span id="status-text">
+                        Your inbox is ready
+                    </span>
+
+                    <span class="status-separator"></span>
+
+                    <span>
+                        Auto-refresh on
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO ART -->
+
+            <div class="hero-art" aria-hidden="true">
+
+                <div class="sun-disc"></div>
+
+                <div class="orbit orbit-one"></div>
+
+                <div class="orbit orbit-two"></div>
+
+                <div class="mail-card">
+
+                    <div class="mail-card-top">
+
+                        <span class="mini-dot"></span>
+                        <span class="mini-dot"></span>
+                        <span class="mini-dot"></span>
+
+                    </div>
+
+                    <div class="mail-lines">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                    </div>
+
+                    <div class="paper-plane">
+                        ➤
+                    </div>
+
+                </div>
+
+                <div class="spark spark-one">
+                    ✦
+                </div>
+
+                <div class="spark spark-two">
+                    ✦
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INBOX ================= -->
+
+        <section
+            class="inbox"
+            aria-labelledby="inbox-title"
+        >
+
+            <div class="inbox-header">
+
+                <div>
+
+                    <div class="section-kicker">
+                        LIVE INBOX
+                    </div>
+
+                    <h2 id="inbox-title">
+                        Inbox
+                        <span id="message-count">0</span>
+                    </h2>
+
+                    <p>
+                        Messages received by your temporary email
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    onclick="refreshInbox()"
+                    class="refresh-btn"
+                >
+                    <span aria-hidden="true">↻</span>
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div id="messages" class="messages">
+
+                <div class="empty-inbox">
+
+                    <div class="empty-icon" aria-hidden="true">
+                        ⌁
+                    </div>
+
+                    <h3>
+                        Your inbox is empty
+                    </h3>
+
+                    <p>
+                        New messages will appear here automatically.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INFORMATION ================= -->
+
+        <section class="info-section">
+
+            <div class="info-content">
+
+                <div class="section-kicker">
+                    ABOUT TEMPORARY EMAIL
+                </div>
+
+                <h2>
+                    What is a Temporary Email?
+                </h2>
+
+                <p>
+                    A temporary email is a disposable email address that
+                    can be used when you do not want to share your personal
+                    email address. It can help reduce unwanted emails and
+                    keep your main inbox more organized.
+                </p>
+
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+
+                        <h3>
+                            Protect Your Inbox
+                        </h3>
+
+                        <p>
+                            Use a temporary address for websites and
+                            services that you do not want connected to
+                            your personal inbox.
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <h3>
+                            Quick and Simple
+                        </h3>
+
+                        <p>
+                            Create an address instantly and receive
+                            messages directly in your temporary inbox.
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <h3>
+                            No Sign-Up Required
+                        </h3>
+
+                        <p>
+                            QuickMail lets you create a temporary email
+                            address without creating a traditional account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRUST / HOW IT WORKS ================= -->
+
+        <section class="trust-row">
+
+            <div>
+                <span class="trust-icon">01</span>
+                <strong>Generate</strong>
+                <span>an instant address</span>
+            </div>
+
+            <div>
+                <span class="trust-icon">02</span>
+                <strong>Receive</strong>
+                <span>messages privately</span>
+            </div>
+
+            <div>
+                <span class="trust-icon">03</span>
+                <strong>Disappear</strong>
+                <span>without a trace</span>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="about">
+
+        <span>
+            © 2026 QuickMail
+        </span>
+
+        <span>
+            Privacy-focused temporary email.
+        </span>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html">
+                Terms of Service
+            </a>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- ================= EMAIL VIEWER MODAL ================= -->
+
+<div
+    id="email-modal"
+    class="email-modal"
+>
+
+    <div class="email-modal-content">
+
+        <button
+            class="modal-close"
+            onclick="closeMessage()"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-header">
+
+            <span class="modal-label">
+                EMAIL MESSAGE
+            </span>
+
+            <h2 id="modal-subject">
+                No subject
+            </h2>
+
+        </div>
+
+
+        <div class="modal-info">
+
+            <div>
+
+                <strong>
+                    From
+                </strong>
+
+                <span id="modal-from">
+                    Unknown sender
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Date
+                </strong>
+
+                <span id="modal-date">
+                    -
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <p id="modal-message">
+                No message content.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
