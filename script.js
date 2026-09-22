@@ -1,4 +1,4 @@
-const API = "/.netlify/functions/inbox";
+const API = "";
 
 let currentEmail = "";
 let currentToken = "";
